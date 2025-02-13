@@ -8,17 +8,9 @@
 </head>
 <body>
 <div class ="container" >
-    <h1 class="text-center my-4">Carros</h1>
-    <a class="btn btn-primary" href="/Carros/create">Cad Carro</a>
-    <form action="/Carros/find" method="get">
-        <div class="row mb-3">
-            <label class="col-sm-4 col-form-label">Buscar Carro pelo Id:</label>
-            <div class="col-sm-8">
-                <input type="number" id="id" name="id" required>
-                <button type="submit">Buscar</button>
-            </div>
-        </div>
-    </form>
+    <h1 class="text-center my-4">Carro</h1>
+    <a class="btn btn-primary" href="/Carros">Voltrar para listar Carros</a>
+
     <table class="table">
         <thead>
         <tr>
@@ -33,7 +25,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="carro : ${carros}">
+        <tr>
             <td th:text="${carro.id}"> </td>
             <td th:text="${carro.marca}"> </td>
             <td th:text="${carro.modelo}"> </td>
